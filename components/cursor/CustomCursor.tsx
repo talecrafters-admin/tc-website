@@ -1,33 +1,33 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function CustomCursor() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const [isPointer, setIsPointer] = useState(false)
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isPointer, setIsPointer] = useState(false);
 
   useEffect(() => {
     const updateMousePosition = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
-      
-      const target = e.target as HTMLElement
-      const isClickable = 
-        target.tagName === 'BUTTON' ||
-        target.tagName === 'A' ||
-        target.onclick !== null ||
-        target.classList.contains('cursor-pointer') ||
-        window.getComputedStyle(target).cursor === 'pointer'
-      
-      setIsPointer(isClickable)
-    }
+      setMousePosition({ x: e.clientX, y: e.clientY });
 
-    window.addEventListener('mousemove', updateMousePosition)
+      const target = e.target as HTMLElement;
+      const isClickable =
+        target.tagName === "BUTTON" ||
+        target.tagName === "A" ||
+        target.onclick !== null ||
+        target.classList.contains("cursor-pointer") ||
+        window.getComputedStyle(target).cursor === "pointer";
+
+      setIsPointer(isClickable);
+    };
+
+    window.addEventListener("mousemove", updateMousePosition);
 
     return () => {
-      window.removeEventListener('mousemove', updateMousePosition)
-    }
-  }, [])
+      window.removeEventListener("mousemove", updateMousePosition);
+    };
+  }, []);
 
   return (
     <>
@@ -61,5 +61,5 @@ export default function CustomCursor() {
         }}
       />
     </>
-  )
+  );
 }

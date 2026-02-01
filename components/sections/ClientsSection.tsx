@@ -1,20 +1,40 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
 // Placeholder client names - replace with actual logos when available
 const clients = [
-  'Client 1', 'Client 2', 'Client 3', 'Client 4', 'Client 5',
-  'Client 6', 'Client 7', 'Client 8', 'Client 9', 'Client 10',
-  'Client 11', 'Client 12', 'Client 13', 'Client 14', 'Client 15',
-  'Client 16', 'Client 17', 'Client 18', 'Client 19', 'Client 20',
-  'Client 21', 'Client 22', 'Client 23', 'Client 24', 'Client 25',
-]
+  "Client 1",
+  "Client 2",
+  "Client 3",
+  "Client 4",
+  "Client 5",
+  "Client 6",
+  "Client 7",
+  "Client 8",
+  "Client 9",
+  "Client 10",
+  "Client 11",
+  "Client 12",
+  "Client 13",
+  "Client 14",
+  "Client 15",
+  "Client 16",
+  "Client 17",
+  "Client 18",
+  "Client 19",
+  "Client 20",
+  "Client 21",
+  "Client 22",
+  "Client 23",
+  "Client 24",
+  "Client 25",
+];
 
 export default function ClientsSection() {
   return (
-    <section className="py-16 px-6 lg:px-8 bg-cream border-t-4 border-black">
-      <div className="mx-auto max-w-7xl">
+    <section className="py-16 px-6 lg:px-8 bg-cream border-t-4 border-black bg-pattern-dots relative">
+      <div className="mx-auto max-w-7xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -68,13 +88,18 @@ export default function ClientsSection() {
           className="mt-12 text-center"
         >
           <p className="text-lg text-black/60">
-            Ready to join them?{' '}
-            <a href="https://calendar.app.google/GnvC7UCPUu48G6RcA" target="_blank" rel="noopener noreferrer" className="font-bold text-black underline hover:text-accent1">
+            Ready to join them?{" "}
+            <a
+              href="https://calendar.app.google/GnvC7UCPUu48G6RcA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-black underline hover:text-accent1"
+            >
               Book a call
             </a>
           </p>
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

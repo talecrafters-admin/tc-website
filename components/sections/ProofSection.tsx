@@ -1,51 +1,53 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Card from '@/components/ui/Card'
-import Button from '@/components/ui/Button'
-import { TrendingUp, DollarSign, Users } from 'lucide-react'
-import Link from 'next/link'
+import { motion } from "framer-motion";
+import Card from "@/components/ui/Card";
+import Button from "@/components/ui/Button";
+import { TrendingUp, DollarSign, Users } from "lucide-react";
+import Link from "next/link";
 
 const caseStudies = [
   {
-    client: 'D2C Fashion Brand',
-    industry: 'E-commerce',
-    challenge: 'High CAC, low repeat purchase rate',
-    roas: '7.8x',
-    revenue: '₹45L',
-    metric: 'in 3 months',
-    testimonial: 'TaleCrafters transformed our ad performance. The ROAS speaks for itself.',
-    author: 'Founder, Fashion Brand',
-    color: 'primary' as const,
+    client: "D2C Fashion Brand",
+    industry: "E-commerce",
+    challenge: "High CAC, low repeat purchase rate",
+    roas: "4.2x",
+    revenue: "₹45L",
+    metric: "in 3 months",
+    testimonial:
+      "TaleCrafters transformed our ad performance. The results speak for themselves.",
+    author: "Founder, Fashion Brand",
+    color: "primary" as const,
   },
   {
-    client: 'SaaS Startup',
-    industry: 'B2B Technology',
-    challenge: 'Inefficient lead generation',
-    roas: '12.4x',
-    leads: '580',
-    metric: 'qualified leads',
-    testimonial: 'Best decision we made. Our pipeline has never been this strong.',
-    author: 'CMO, SaaS Company',
-    color: 'accent1' as const,
+    client: "SaaS Startup",
+    industry: "B2B Technology",
+    challenge: "Inefficient lead generation",
+    roas: "5.4x",
+    leads: "580",
+    metric: "qualified leads",
+    testimonial:
+      "Best decision we made. Our pipeline has never been this strong.",
+    author: "CMO, SaaS Company",
+    color: "accent1" as const,
   },
   {
-    client: 'Health & Wellness',
-    industry: 'D2C',
-    challenge: 'Scaling beyond initial success',
-    roas: '9.2x',
-    revenue: '₹1.2Cr',
-    metric: 'annual revenue',
-    testimonial: 'They helped us scale profitably. No BS, just results.',
-    author: 'Co-founder, Wellness Brand',
-    color: 'secondary' as const,
+    client: "Health & Wellness",
+    industry: "D2C",
+    challenge: "Scaling beyond initial success",
+    roas: "3.8x",
+    revenue: "₹1.2Cr",
+    metric: "annual revenue",
+    testimonial: "They helped us scale profitably. No BS, just results.",
+    author: "Co-founder, Wellness Brand",
+    color: "secondary" as const,
   },
-]
+];
 
 export default function ProofSection() {
   return (
-    <section className="py-20 px-6 lg:px-8 bg-white">
-      <div className="mx-auto max-w-7xl">
+    <section className="py-20 px-6 lg:px-8 bg-white bg-pattern-cross relative">
+      <div className="mx-auto max-w-7xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -132,5 +134,5 @@ export default function ProofSection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Button from '@/components/ui/Button'
-import { Rocket, Shield } from 'lucide-react'
-import Link from 'next/link'
+import { motion } from "framer-motion";
+import Button from "@/components/ui/Button";
+import { Rocket, Shield } from "lucide-react";
+import Link from "next/link";
 
 export default function FinalCTASection() {
   return (
@@ -44,9 +44,9 @@ export default function FinalCTASection() {
           <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6">
             Ready To Grow Your Brand?
           </h2>
-          
+
           <p className="text-xl md:text-2xl mb-8">
-            Book your free strategy call. We'll analyze your current marketing 
+            Book your free strategy call. We'll analyze your current marketing
             and show you exactly how to unlock growth.
           </p>
 
@@ -62,7 +62,11 @@ export default function FinalCTASection() {
             className="mb-8"
           >
             <Button variant="primary" size="lg" asChild>
-              <Link href="https://calendar.app.google/GnvC7UCPUu48G6RcA" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://calendar.app.google/GnvC7UCPUu48G6RcA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Rocket className="w-5 h-5 mr-2 inline" />
                 Claim Free Audit
               </Link>
@@ -82,5 +86,5 @@ export default function FinalCTASection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

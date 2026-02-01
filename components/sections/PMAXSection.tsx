@@ -1,28 +1,28 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Card from '@/components/ui/Card'
-import Button from '@/components/ui/Button'
-import { Zap, Target, BarChart } from 'lucide-react'
-import Link from 'next/link'
+import { motion } from "framer-motion";
+import Card from "@/components/ui/Card";
+import Button from "@/components/ui/Button";
+import { Zap, Target, BarChart } from "lucide-react";
+import Link from "next/link";
 
 const benefits = [
   {
     icon: Zap,
-    title: 'AI-Powered Optimization',
-    description: 'Google\'s machine learning finds your best customers',
+    title: "AI-Powered Optimization",
+    description: "Google's machine learning finds your best customers",
   },
   {
     icon: Target,
-    title: 'Cross-Channel Reach',
-    description: 'Search, Display, YouTube, Gmail - all in one campaign',
+    title: "Cross-Channel Reach",
+    description: "Search, Display, YouTube, Gmail - all in one campaign",
   },
   {
     icon: BarChart,
-    title: 'Conversion-Focused',
-    description: 'Optimizes for actual sales, not just clicks',
+    title: "Conversion-Focused",
+    description: "Optimizes for actual sales, not just clicks",
   },
-]
+];
 
 export default function PMAXSection() {
   return (
@@ -46,7 +46,8 @@ export default function PMAXSection() {
             In The Right Hands.
           </h2>
           <p className="text-xl md:text-2xl mb-4">
-            We've managed <span className="font-bold font-mono">50+ PMAX campaigns</span>
+            We've managed{" "}
+            <span className="font-bold font-mono">50+ PMAX campaigns</span>
           </p>
           <p className="text-lg">
             Optimizing for actual conversions, not vanity metrics
@@ -67,9 +68,7 @@ export default function PMAXSection() {
                 <h3 className="font-heading text-xl font-bold mb-2">
                   {benefit.title}
                 </h3>
-                <p className="text-sm">
-                  {benefit.description}
-                </p>
+                <p className="text-sm">{benefit.description}</p>
               </div>
             </motion.div>
           ))}
@@ -88,5 +87,5 @@ export default function PMAXSection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
